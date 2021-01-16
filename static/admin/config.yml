@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: https://github.com/margaal/margaal-blog-240df.git
+  name: git-gateway
   branch: master
 
 media_folder: static/img
