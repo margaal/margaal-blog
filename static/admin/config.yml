@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: https://github.com/margaal/margaal-blog-240df.git
+  repo: https://github.com/margaal/margaal-blog.git
   branch: master
 
 media_folder: static/img
