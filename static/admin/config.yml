@@ -1,8 +1,9 @@
 backend:
-  name: test-repo
+  name: git-gateway
+  branch: master
 
 media_folder: static/images
-public folder: /public
+public_folder: '/public'
 publish_mode: editorial_workflow
 collections:
   - name: 'blog'
@@ -11,7 +12,7 @@ collections:
     create: true
     slug: 'index'
     media_folder: ''
-    public_folder: 'public'
+    public_folder: ''
     path: '{{title}}/index'
     editor:
       preview: true
@@ -31,7 +32,7 @@ collections:
     create: true
     slug: 'index'
     media_folder: ''
-    public_folder: 'public'
+    public_folder: ''
     path: '{{title}}/index'
     editor:
       preview: true
