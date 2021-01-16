@@ -1,9 +1,10 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: https://github.com/margaal/margaal-blog-240df.git
   branch: master
 
-media_folder: static/images
-public_folder: '/public'
+media_folder: static/img
+public folder: /img
 publish_mode: editorial_workflow
 collections:
   - name: 'blog'
@@ -12,7 +13,7 @@ collections:
     create: true
     slug: 'index'
     media_folder: ''
-    public_folder: ''
+    public_folder: 'public'
     path: '{{title}}/index'
     editor:
       preview: true
@@ -32,7 +33,7 @@ collections:
     create: true
     slug: 'index'
     media_folder: ''
-    public_folder: ''
+    public_folder: 'public'
     path: '{{title}}/index'
     editor:
       preview: true
