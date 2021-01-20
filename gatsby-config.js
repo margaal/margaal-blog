@@ -1,4 +1,7 @@
 const siteMetadata = require('./site-metadata.json')
+require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`,
+  })
 
 module.exports = {
     pathPrefix: '/',
@@ -11,6 +14,13 @@ module.exports = {
             resolve: `gatsby-plugin-netlify-cms`,
             options: {
                 modulePath: `${__dirname}/src/cms/cms.js`
+            }
+        },
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+            // The property ID; the tracking code won't be generated without it
+            trackingId: process.env.GA_TRACKING_ID,
             }
         },
         {
