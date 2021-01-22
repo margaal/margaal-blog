@@ -2,6 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import moment from 'moment-strftime';
 import {graphql} from 'gatsby';
+import { Disqus } from 'gatsby-plugin-disqus';
 
 import {Layout} from '../components/index';
 import {htmlToReact, withPrefix} from '../utils';
@@ -16,12 +17,18 @@ export const query = graphql`
   }
 `;
 
+
 export default class Post extends React.Component {
+  
+   disqusConfig = { identifier: this.props.pageContext.id,
+            title: this.props.pageContext.frontmatter.title,    };
     render() {
         return (
             <Layout {...this.props}>
+          
             <div className="inner outer">
               <article className="post post-full">
+              
                 <header className="post-header inner-sm">
                   <h1 className="post-title line-top">{_.get(this.props, 'pageContext.frontmatter.title', null)}</h1>
                   {_.get(this.props, 'pageContext.frontmatter.subtitle', null) && (
@@ -29,6 +36,7 @@ export default class Post extends React.Component {
                     {htmlToReact(_.get(this.props, 'pageContext.frontmatter.subtitle', null))}
                   </div>
                   )}
+                   <time className="published" dateTime={moment(_.get(this.props, 'pageContext.frontmatter.date', null)).strftime('%Y-%m-%d %H:%M')}>{moment(_.get(this.props, 'pageContext.frontmatter.date', null)).strftime('%B %d, %Y')}</time>
                 </header>
                 {_.get(this.props, 'pageContext.frontmatter.image', null) && (
                 <div className="post-image">
@@ -39,8 +47,9 @@ export default class Post extends React.Component {
                   {htmlToReact(_.get(this.props, 'pageContext.html', null))}
                 </div>
                 <footer className="post-meta inner-sm">
-                  <time className="published" dateTime={moment(_.get(this.props, 'pageContext.frontmatter.date', null)).strftime('%Y-%m-%d %H:%M')}>{moment(_.get(this.props, 'pageContext.frontmatter.date', null)).strftime('%B %d, %Y')}</time>
+                  <Disqus config={this.disqusConfig} />  
                 </footer>
+                
               </article>
             </div>
             </Layout>
