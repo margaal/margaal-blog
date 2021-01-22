@@ -300,10 +300,10 @@ models:
         description: The excerpt of the post displayed in the blog feed and in meta data.
   project:
     type: page
-    urlPath: '/portfolio/{slug}'
+    urlPath: '/projects/{slug}'
     label: Project
     layout: project
-    folder: portfolio
+    folder: projects
     fields:
       - type: string
         name: title

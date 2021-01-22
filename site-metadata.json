@@ -17,13 +17,8 @@
                 "style": "link"
             },
             {
-                "label": "Project",
-                "url": "/portfolio/",
-                "style": "link"
-            },
-            {
-                "label": "About Me",
-                "url": "/cv/",
+                "label": "Projects",
+                "url": "/projects/",
                 "style": "link"
             },
             {

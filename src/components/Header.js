@@ -5,6 +5,8 @@ import {Link, withPrefix, classNames} from '../utils';
 import ActionLink from './ActionLink';
 
 export default class Header extends React.Component {
+  
+
     render() {
         return (
             <header id="masthead" className="site-header outer">
@@ -36,6 +38,7 @@ export default class Header extends React.Component {
                         })}
                       </ul>
                     </div>
+ 
                   </nav>
                   </React.Fragment>)}
                 </div>

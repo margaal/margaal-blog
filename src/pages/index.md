@@ -32,13 +32,6 @@ sections:
       <!---->
 
 
-      *   **About me:**
-
-          I put here my education, my experience and my awards.
-
-      <!---->
-
-
       *   **Contact:**
 
           if you have any questions or suggestions, please write to me and I will do my best to answer you as soon as possible.
@@ -46,10 +39,7 @@ sections:
       **Good!!!** I think you will have fun on my website and come back next
       time. Don't forget to follow me on Twitter to receive notifications of any
       relevant events on my blog. Thank you
-    actions:
-      - label: About me
-        url: /about
-        style: button
+    
   - section_id: latest-posts
     type: section_posts
     title: Latest from the Blog
